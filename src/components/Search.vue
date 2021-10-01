@@ -1,5 +1,12 @@
 <template>
-    <div></div>
+    <div class="flex">
+        <div>
+            <input type="text" placeholder="cerca il tuo film preferito">
+        </div>
+        <div>
+            <button class="custom-botton">Cerca Film</button>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -16,6 +23,10 @@ export default {
 
     created: function (){
         axios.get("https://api.themoviedb.org/3/movie/550?api_key=b44f67a7438dbc78b01da40ce05c127a")
+        .then((film) => {
+            console.log(film)
+
+        })
     }
     
 
@@ -24,5 +35,19 @@ export default {
 </script>
 
 <style>
+input{
+    width: 200px;
+}
+    
+    
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.custom-botton{
+    
+    background-color: red;
+    font-size: 15px;
+}
 
 </style>

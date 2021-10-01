@@ -2,16 +2,19 @@
   <div id="app">
     
     <Search />
+    <Film />
   </div>
 </template>
 
 <script>
-import Search from './components/Search.vue'
+import Search from './components/Search.vue';
+import Film from "./components/Film.vue";
 
 export default {
   name: 'App',
   components: {
-    Search
+    Search,
+    Film
   }
 }
 </script>
