@@ -4,10 +4,12 @@
 
 <script>
 export default {
+    name: 'Film',
+    props: [films],
     
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>

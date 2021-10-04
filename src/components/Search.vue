@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import axios from "axios";
+
 
 export default {
     name: "Search",
@@ -18,26 +18,12 @@ export default {
     data: function(){
         return{
             needle: '',
-            titoliFilm : [],
-
         }
     },
 
-    created: function (){
-        axios.get("https://api.themoviedb.org/3/search/movie",
-        {
-            params:{
-                api_key: "b44f67a7438dbc78b01da40ce05c127a",
-                query: ""
-            }
 
-        })
-        .then((film) => {
-            
-            console.log(film)
-        })
-        
-    },
+
+    
 
 
     

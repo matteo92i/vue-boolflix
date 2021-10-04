@@ -1,21 +1,50 @@
 <template>
   <div id="app">
     
-    <Search @ricerca="cerca"/>
-    <Film />
+    <Search @ricerca="cercaFilm"/>
+    <Film :tuttiFilm/>
   </div>
 </template>
 
 <script>
 import Search from './components/Search.vue';
 import Film from "./components/Film.vue";
+import axios from "axios"
 
 export default {
   name: 'App',
   components: {
     Search,
     Film
-  }
+  },
+  methods: {
+    cercaFilm: function(trovato){
+      if(trovato.leght > 3){
+        axios.get(this.apiLink,{
+          params: {
+            api_key: this.api_key,
+            query: trovato,
+          }
+        }).then((risposta)=>{
+          this.films = [...risposta.data.results];
+          console.log(this.films)
+        })
+      }
+      
+    }
+
+
+  },
+
+  data: function(){
+    return{
+      api_key: "b44f67a7438dbc78b01da40ce05c127a",
+      apiLink: 'https://api.themoviedb.org/3/search/movie',
+      films : [],
+      }
+    },
+            
+
 }
 </script>
 
