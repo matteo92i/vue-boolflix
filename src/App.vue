@@ -18,18 +18,20 @@ export default {
     Film
   },
   methods: {
-    cercaFilm: function(trovato){
-      if(trovato.leght > 3){
+    cercaFilm: function(needle){
+      
+      
+        console.log(needle)
         axios.get(this.apiLink,{
           params: {
             api_key: this.api_key,
-            query: trovato,
+            query: needle,
           }
         }).then((risposta)=>{
           this.films = [...risposta.data.results];
           console.log(this.films)
         })
-      }
+      
       
     }
 

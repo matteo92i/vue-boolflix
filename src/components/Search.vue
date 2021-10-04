@@ -4,7 +4,7 @@
             <input type="text" placeholder="cerca il tuo film preferito" v-model= "needle">
         </div>
         <div>
-            <button class="custom-botton" @click="$emit('ricerca', needle)">Cerca Film</button>
+            <button class="custom-botton" @click.prevent="$emit('ricerca', needle)">Cerca Film</button>
         </div>
     </div>
 </template>
