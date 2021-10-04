@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <Search />
+    <Search @ricerca="cerca"/>
     <Film />
   </div>
 </template>
