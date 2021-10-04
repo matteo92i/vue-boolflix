@@ -2,7 +2,7 @@
   <div id="app">
     
     <Search @ricerca="cercaFilm"/>
-    <Film :tuttiFilm/>
+    <Film />
   </div>
 </template>
 

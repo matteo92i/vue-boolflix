@@ -5,7 +5,7 @@
 <script>
 export default {
     name: 'Film',
-    props: [films],
+    
     
 }
 </script>
