@@ -46,6 +46,7 @@ export default {
 </script>
 
 <style>
+
 input{
     width: 200px;
 }
